@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r ts-node/register/transpile-only ./index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket.io",
+    "redis"
+  ],
+  "author": {
+    "email": "fujia.site@outlook.com",
+    "name": "fujia"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@socket.io/sticky": "^1.0.1",
+    "ioredis": "^5.0.4",
+    "socket.io": "^4.5.0",
+    "socket.io-redis": "^6.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0"
+  }
+}
