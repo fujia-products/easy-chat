@@ -37,7 +37,32 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .container {
-  width: 300px;
-  margin: 200px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 300px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  margin: 100px auto 0;
+
+  .input {
+    width: 156px;
+    height: 32px;
+    padding: 0 8px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+
+    &:focus {
+      border-color: #42b983;
+      outline: none;
+    }
+  }
+
+  .button {
+    height: 32px;
+    padding: 0 16px;
+    margin-left: 16px;
+  }
 }
 </style>

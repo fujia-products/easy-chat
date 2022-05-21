@@ -8,7 +8,7 @@
         <status-icon :connected="user?.connected" />{{ status }}
       </div>
     </div>
-    <div v-if="user?.hasNewMessages" class="new-messages">!</div>
+    <div v-if="user?.hasNewMessages" class="new-messages"></div>
   </div>
 </template>
 
@@ -44,22 +44,34 @@ export default defineComponent({
   background-color: #1164a3;
 }
 .user {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 14px;
 }
 .desc {
+  text-align: left;
   display: inline-block;
+  flex: auto;
 
   .status {
     color: #92959e;
   }
 }
 .new-messages {
-  color: white;
+  width: 8px;
+  height: 8px;
   background-color: red;
-  width: 20px;
-  border-radius: 5px;
-  text-align: center;
-  float: right;
-  margin-top: 10px;
+  border-radius: 4px;
+  /* animation: blink 2s ease-in-out infinite; */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
 }
 </style>
